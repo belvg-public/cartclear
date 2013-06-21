@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Belvg_Cartclear>
+            <version>1.0.0</version>
+        </Belvg_Cartclear>
+    </modules>
+    <global>
+        <helpers>
+            <belvg_cartclear>
+                <class>Belvg_Cartclear_Helper</class>
+            </belvg_cartclear>
+        </helpers>
+        <models>
+            <belvg_cartclear>
+                <class>Belvg_Cartclear_Model</class>
+            </belvg_cartclear>
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <belvg_cartclear>
+                <schedule>
+                    <config_path>belvg_cartclear/settings/scheduler</config_path>
+                </schedule>
+                <run>
+                    <model>belvg_cartclear/sales_quote::run</model>
+                </run>
+            </belvg_cartclear>
+        </jobs>
+    </crontab>
+    <default>
+        <belvg_cartclear>
+            <settings>
+                <scheduler>30 * * * *</scheduler>
+                <customer>60</customer>
+                <anonymous>30</anonymous>
+            </settings>
+        </belvg_cartclear>
+    </default>
+</config>

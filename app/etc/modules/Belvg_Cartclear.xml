@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Belvg_Cartclear>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends></depends>
+        </Belvg_Cartclear>
+    </modules>
+</config>
